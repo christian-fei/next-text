@@ -1,4 +1,9 @@
-[![Build Status](https://travis-ci.org/christian-fei/next-text.svg?branch=master)](https://travis-ci.org/christian-fei/next-text)
+[![travis-build-status](https://travis-ci.org/christian-fei/next-text.svg?branch=master)](https://travis-ci.org/christian-fei/next-text)
+[![npm-dependencies](https://img.shields.io/badge/dependencies-none-blue.svg?style=flat-square&colorB=44CC11)](package.json)
+[![standard-js](https://img.shields.io/badge/coding%20style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com/)
+[![npm-node-version](https://img.shields.io/badge/node-6%2B-blue.svg?style=flat-square)](https://nodejs.org/docs/v6.0.0/api)
+[![npm-version](https://img.shields.io/npm/v/next-text.svg?style=flat-square&colorB=007EC6)](https://www.npmjs.com/package/next-text)
+[![license](https://img.shields.io/npm/l/next-text.svg?style=flat-square&colorB=007EC6)](https://spdx.org/licenses/MIT)
 
 nextText is a small utility function to get the next letter from a partial string.
 
