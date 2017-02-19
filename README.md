@@ -13,7 +13,7 @@ nextText is a small utility function to get the next letter from a partial strin
 
 #### `text : String` (*required*)
 
-The complete string the module should "type" incrementally.
+The complete string the module should iterate incrementally.
 
 #### `options : Object` (*optional*)
 
