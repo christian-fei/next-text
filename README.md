@@ -6,7 +6,7 @@ nextText is a small utility function to get the next letter from a partial strin
 
 ## `nextText`
 
-`nextText` creates an [instance of nextText](#next-text-instance).
+`nextText` creates an [instance of nextText](#nexttextinstance).
 
 
 ### Params
