@@ -37,10 +37,15 @@ test('nextText', function () {
 
   test('when the string has been iterated', function () {
     test('returns always the original text', function () {
-      let text = nextText('t')
+      let text = nextText('test')
       equal(text, '')
       equal(text = text.next(), 't')
-      equal(text = text.next(), 't')
+      equal(text = text.next(), 'te')
+      equal(text = text.next(), 'tes')
+      equal(text = text.next(), 'test')
+      equal(text = text.next(), 'test')
+      equal(text = text.next(), 'test')
+      equal(text = text.next(), 'test')
     })
 
     test('can be specified if the string should be iterated from the start', function () {
