@@ -3,14 +3,14 @@
 const nextText = require('..')
 const {ok, equal} = require('assert')
 
-test('nextText', function () {
-  test('returns an object with `.toString()`', function () {
+test('nextText', () => {
+  test('returns an object with `.toString()`', () => {
     let text = nextText('Lorem')
     ok(text.toString)
     equal(typeof text.toString, 'function')
   })
 
-  test('`.toString()` returns each letter in sequence', function () {
+  test('`.toString()` returns each letter in sequence', () => {
     let text = nextText('Lorem')
     equal(text.toString(), '')
     text = text.next()
@@ -25,7 +25,7 @@ test('nextText', function () {
     equal(text.toString(), 'Lorem')
   })
 
-  test('`.toString()` can also be omitted when coercing to string', function () {
+  test('`.toString()` can also be omitted when coercing to string', () => {
     let text = nextText('Lorem')
     equal(text, '')
     equal(text = text.next(), 'L')
@@ -35,8 +35,8 @@ test('nextText', function () {
     equal(text = text.next(), 'Lorem')
   })
 
-  test('when the string has been iterated', function () {
-    test('returns always the original text', function () {
+  test('when the string has been iterated', () => {
+    test('returns always the original text', () => {
       let text = nextText('test')
       equal(text, '')
       equal(text = text.next(), 't')
@@ -48,7 +48,7 @@ test('nextText', function () {
       equal(text = text.next(), 'test')
     })
 
-    test('can be specified if the string should be iterated from the start', function () {
+    test('can be specified if the string should be iterated from the start', () => {
       let text = nextText('test', {restart: true})
       equal(text, '')
       equal(text = text.next(), 't')
