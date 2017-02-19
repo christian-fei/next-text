@@ -1,0 +1,15 @@
+{
+  "name": "next-text",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "m.test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "m.test": "0.0.53"
+  }
+}
