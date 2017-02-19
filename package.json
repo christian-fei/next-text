@@ -11,13 +11,10 @@
   "author": "Christian Fei",
   "license": "MIT",
   "devDependencies": {
-    "m.test": "0.0.53"
+    "m.test": "latest"
   },
   "directories": {
     "test": "test"
-  },
-  "dependencies": {
-    "m.test": "^0.0.53"
   },
   "repository": {
     "type": "git",
