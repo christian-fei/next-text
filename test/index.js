@@ -3,9 +3,10 @@
 const nextText = require('..')
 const {ok, equal} = require('assert')
 
-test('return an object with `.toString()`', function () {
+test('returns an object with `.toString()`', function () {
   let text = nextText('Lorem')
   ok(text.toString)
+  equal(typeof text.toString, 'function')
 })
 
 test('`.toString()` returns each letter in sequence', function () {
