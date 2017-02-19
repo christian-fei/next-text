@@ -22,6 +22,7 @@ You can override these options:
 | Option name | Default value | Description                                                  |
 |-------------|---------------|--------------------------------------------------------------|
 | restart     | false         | Once the text has been iterated, restart from the beginning. |
+
 <!-- |             |               |                                                              | -->
 
 
