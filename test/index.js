@@ -40,4 +40,18 @@ test('when the string has been iterated', function () {
     equal(text = text.next(), 't')
     equal(text = text.next(), 't')
   })
+
+  test('can be specified if the string should be iterated from the start', function () {
+    let text = nextText('test', {restart: true})
+    equal(text, '')
+    equal(text = text.next(), 't')
+    equal(text = text.next(), 'te')
+    equal(text = text.next(), 'tes')
+    equal(text = text.next(), 'test')
+    equal(text = text.next(), '')
+    equal(text = text.next(), 't')
+    equal(text = text.next(), 'te')
+    equal(text = text.next(), 'tes')
+    equal(text = text.next(), 'test')
+  })
 })
