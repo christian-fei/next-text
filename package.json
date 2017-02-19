@@ -1,16 +1,30 @@
 {
   "name": "next-text",
   "version": "0.0.1",
-  "description": "",
+  "description": "[![Build Status](https://travis-ci.org/christian-fei/next-text.svg?branch=master)](https://travis-ci.org/christian-fei/next-text)",
   "main": "index.js",
   "scripts": {
     "test": "m.test",
     "m.test": "m.test"
   },
   "keywords": [],
-  "author": "",
+  "author": "Christian Fei",
   "license": "MIT",
   "devDependencies": {
     "m.test": "0.0.53"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "m.test": "^0.0.53"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christian-fei/next-text.git"
+  },
+  "bugs": {
+    "url": "https://github.com/christian-fei/next-text/issues"
+  },
+  "homepage": "https://github.com/christian-fei/next-text#readme"
 }
