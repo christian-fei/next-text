@@ -43,6 +43,9 @@ Returns the next instance, with the updated current value.
 
 # usage
 
+[See Tests](./test/index.js).
+
+
 ```
 const nextText = require('next-text')
 let text = nextText('This is a test')
