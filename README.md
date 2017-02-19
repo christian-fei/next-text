@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/christian-fei/next-text.svg?branch=master)](https://travis-ci.org/christian-fei/next-text)
+
 nextText is a small utility function to get the next letter from a partial string.
 
 # usage
