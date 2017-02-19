@@ -1,4 +1,4 @@
-/* globals test ok equal */
+/* globals test */
 'use strict'
 const nextText = require('..')
 const {ok, equal} = require('assert')
@@ -31,4 +31,13 @@ test('`.toString()` can also be omitted when coercing to string', function () {
   equal(text = text.next(), 'Lor')
   equal(text = text.next(), 'Lore')
   equal(text = text.next(), 'Lorem')
+})
+
+test('when the string has been iterated', function () {
+  test('returns always the original text', function () {
+    let text = nextText('t')
+    equal(text, '')
+    equal(text = text.next(), 't')
+    equal(text = text.next(), 't')
+  })
 })
