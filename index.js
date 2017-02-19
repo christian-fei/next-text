@@ -1,25 +1,17 @@
 'use strict'
-const {parseArgs} = require('./utils')
-
-module.exports = function nextText () {
-  const {originalString, options, currentString} = parseArgs(arguments)
+module.exports = function nextText (originalString, options = {}, currentString = '') {
   return {
     toString,
     next
   }
 
   function next () {
-    var currentLength = currentString.length
-    var remainingText = originalString.slice(currentLength)
-    var nextLetter = remainingText.length === 0 ? '' : remainingText[0]
-    var nextString = currentString + nextLetter
-    if (options.restart) {
-      if (nextLetter === '') {
-        return nextText(originalString, options, '')
-      }
-      return nextText(originalString, options, nextString)
+    var remainingText = originalString.slice(currentString.length)
+    var finishedTyping = remainingText.length === 0
+    if (finishedTyping) {
+      return nextText(originalString, options, options.restart ? '' : originalString)
     }
-    return nextText(originalString, nextString)
+    return nextText(originalString, options, currentString + remainingText[0])
   }
 
   function toString () {
