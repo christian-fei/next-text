@@ -1,6 +1,6 @@
 {
   "name": "next-text",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "[![Build Status](https://travis-ci.org/christian-fei/next-text.svg?branch=master)](https://travis-ci.org/christian-fei/next-text)",
   "main": "index.js",
   "scripts": {
