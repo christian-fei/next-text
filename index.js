@@ -3,12 +3,9 @@ module.exports = nextText
 
 function nextText (originalString, options = {}, currentString = '') {
   const next = nextFor(originalString, options, currentString)
+  const reset = () => nextText(originalString, options, '')
   const toString = () => currentString
-
-  return {
-    toString,
-    next
-  }
+  return { toString, next, reset }
 }
 
 function nextFor (originalString, options, currentString) {

@@ -62,4 +62,14 @@ test('nextText', () => {
       equal(text = text.next(), 'test')
     })
   })
+
+  test('resets a nextText instance', () => {
+    let text = nextText('Lorem')
+    equal(text, '')
+    equal(text = text.next(), 'L')
+    equal(text = text.next(), 'Lo')
+    equal(text = text.reset(), '')
+    equal(text = text.next(), 'L')
+    equal(text = text.next(), 'Lo')
+  })
 })
