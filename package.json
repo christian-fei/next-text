@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/christian-fei/next-text/issues"
   },
-  "homepage": "https://github.com/christian-fei/next-text#readme"
+  "homepage": "https://github.com/christian-fei/next-text#readme",
+  "standard": {
+    "globals": ["test"]
+  }
 }

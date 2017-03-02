@@ -1,5 +1,3 @@
-/* globals test */
-'use strict'
 const nextText = require('..')
 const {ok, equal} = require('assert')
 
