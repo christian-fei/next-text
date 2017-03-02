@@ -16,7 +16,3 @@ function nextFor (originalString, options, currentString) {
   }
   return () => nextText(originalString, options, currentString + remainingText[0])
 }
-
-function nextFrom (nextTextInstance) {
-  return nextFor(nextTextInstance.originalString, nextTextInstance.options, nextTextInstance.currentString)()
-}
