@@ -1,6 +1,8 @@
 module.exports = nextText
 
-function nextText (originalString, options = {}, currentString = '') {
+function nextText (originalString, options, currentString) {
+  options = options || {}
+  currentString = currentString || ''
   return Object.assign(currentString, {
     next: nextFor(originalString, options, currentString),
     reset: () => nextText(originalString, options, String.prototype)
