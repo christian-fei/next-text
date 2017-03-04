@@ -1,10 +1,10 @@
 module.exports = nextText
 
 function nextText (originalString, options = {}, currentString = '') {
-  const next = nextFor(originalString, options, currentString)
-  const reset = () => nextText(originalString, options, '')
-  const toString = () => currentString
-  return { toString, next, reset }
+  return Object.assign(currentString, {
+    next: nextFor(originalString, options, currentString),
+    reset: () => nextText(originalString, options, String.prototype)
+  })
 }
 
 function nextFor (originalString, options, currentString) {

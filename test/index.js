@@ -1,11 +1,16 @@
 const nextText = require('..')
-const {ok, equal} = require('assert')
+const {ok, equal, notStrictEqual} = require('assert')
 
 test('nextText', () => {
   test('returns an object with `.toString()`', () => {
     let text = nextText('Lorem')
     ok(text.toString)
     equal(typeof text.toString, 'function')
+  })
+
+  test('is not coerced into string', () => {
+    let text = nextText('Lorem')
+    notStrictEqual(text, '')
   })
 
   test('`.toString()` returns each letter in sequence', () => {
