@@ -1,13 +1,18 @@
 {
   "name": "next-text",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "nextText is a small utility function to get the next letter from a partial string",
   "main": "index.js",
   "scripts": {
     "test": "m.test",
     "m.test": "m.test"
   },
-  "keywords": ["utility","typewriter","string utility", "utils"],
+  "keywords": [
+    "utility",
+    "typewriter",
+    "string utility",
+    "utils"
+  ],
   "author": "Christian Fei",
   "license": "MIT",
   "devDependencies": {
@@ -25,6 +30,8 @@
   },
   "homepage": "https://github.com/christian-fei/next-text#readme",
   "standard": {
-    "globals": ["test"]
+    "globals": [
+      "test"
+    ]
   }
 }
