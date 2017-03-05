@@ -1,6 +1,6 @@
 {
   "name": "next-text",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "nextText is a small utility function to get the next letter from a partial string",
   "main": "index.js",
   "scripts": {
