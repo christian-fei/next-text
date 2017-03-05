@@ -1,11 +1,12 @@
 module.exports = nextText
 
 function nextText (originalString, options, currentString) {
+  originalString = originalString || ''
   options = options || {}
-  currentString = currentString || ''
+  currentString = currentString ? currentString : originalString[0]
   return Object.assign(currentString, {
     next: nextFor(originalString, options, currentString),
-    reset: function () { return nextText(originalString, options, String.prototype) }
+    reset: function () { return nextText(originalString, options, originalString[0]) }
   })
 }
 

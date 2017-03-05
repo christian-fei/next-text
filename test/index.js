@@ -15,8 +15,6 @@ test('nextText', () => {
 
   test('`.toString()` returns each letter in sequence', () => {
     let text = nextText('Lorem')
-    equal(text.toString(), '')
-    text = text.next()
     equal(text.toString(), 'L')
     text = text.next()
     equal(text.toString(), 'Lo')
@@ -30,8 +28,7 @@ test('nextText', () => {
 
   test('`.toString()` can also be omitted when coercing to string', () => {
     let text = nextText('Lorem')
-    equal(text, '')
-    equal(text = text.next(), 'L')
+    equal(text, 'L')
     equal(text = text.next(), 'Lo')
     equal(text = text.next(), 'Lor')
     equal(text = text.next(), 'Lore')
@@ -41,8 +38,7 @@ test('nextText', () => {
   test('when the string has been iterated', () => {
     test('returns always the original text', () => {
       let text = nextText('test')
-      equal(text, '')
-      equal(text = text.next(), 't')
+      equal(text, 't')
       equal(text = text.next(), 'te')
       equal(text = text.next(), 'tes')
       equal(text = text.next(), 'test')
@@ -53,12 +49,10 @@ test('nextText', () => {
 
     test('can be specified if the string should be iterated from the start', () => {
       let text = nextText('test', {restart: true})
-      equal(text, '')
-      equal(text = text.next(), 't')
+      equal(text, 't')
       equal(text = text.next(), 'te')
       equal(text = text.next(), 'tes')
       equal(text = text.next(), 'test')
-      equal(text = text.next(), '')
       equal(text = text.next(), 't')
       equal(text = text.next(), 'te')
       equal(text = text.next(), 'tes')
@@ -68,11 +62,15 @@ test('nextText', () => {
 
   test('resets a nextText instance', () => {
     let text = nextText('Lorem')
-    equal(text, '')
-    equal(text = text.next(), 'L')
+    equal(text, 'L')
     equal(text = text.next(), 'Lo')
-    equal(text = text.reset(), '')
-    equal(text = text.next(), 'L')
+    equal(text = text.reset(), 'L')
     equal(text = text.next(), 'Lo')
   })
+
+  // test('can be resumed', () => {
+  //   let text = nextText('Lorem')
+  //   equal(text, '')
+  //   equal(text = text.next(), 'L')
+  // })
 })
