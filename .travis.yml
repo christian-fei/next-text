@@ -5,7 +5,8 @@ cache:
   directories:
   - node_modules
 node_js:
-- 7.5
+- 10.0
+- 9.0
+- 8.0
 - 7.0
-- 6.9
 - 6.0
